@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import logo from "../../assets/logo.png";
 import "./Navbar.css"
 import { GiHamburgerMenu } from "react-icons/gi";
-import MobileNavbar from './MobileNavbar';
+import MobileNavbar from './ServiceMobileNavbar';
 
-function Navbar() {
+function ServiceNavbar() {
   const [isMobileView,setMobileView]=useState(false);
   return (
     <div className='navbar md:p-4 md:px-[30px] max-sm:p-2 '>
@@ -40,4 +40,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default ServiceNavbar
