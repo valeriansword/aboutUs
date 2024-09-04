@@ -10,25 +10,26 @@ function MainContent() {
   return (
     <div className=' text-white  '>
         {/* top-Content */}
-        <div className='flex mb-[30px] p-4 px-[30px] '>
-            <div className='flex flex-col  justify-center'>
-                <h1 className='text-4xl font-bold'>About Us</h1>
-                <p className='text-lg font-bold'>Committed to becoming a top-class digitally enabled 
+        <div className='flex mb-[30px] md:p-4 md:px-[30px] max-sm:p-2 max-sm:w-full max-sm:flex-col-reverse'>
+            <div className='flex flex-col  justify-center max-sm:w-full max-sm:mt-[20px]'>
+                <h1 className='text-4xl font-bold max-sm:text-xl'>About Us</h1>
+                <p className='text-lg font-bold max-sm:text-md max-sm:font-thin'>Committed to becoming a top-class digitally enabled 
                     customer focused fintech@scale.
                 </p>
-                <button className='ring-2 ring-[#11AAA2] rounded-[30px] bg-[#11AAA2] flex justify-center text-lg font-normal w-[25%] mt-[30px]'>
+                <button className='ring-2 ring-[#11AAA2] rounded-[30px]
+                 bg-[#11AAA2] flex justify-center text-lg font-normal md:w-[25%] mt-[30px] max-sm:w-[150px]'>
                     Get Loan
                     <GrFormNextLink size="30"/>
                 </button>
             </div>
             <div>
-                <img src={aboutUs} />
+                <img src={aboutUs} className='max-sm:h-[200px] max-sm:w-full'/>
             </div>
         </div>
         {/* aboutus image and content */}
-        <div className='bg-white text-black p-4 px-[30px]'>
-            <div className='flex items-center '>
-                <img src={collab} className='h-[400px]'/>
+        <div className='bg-white text-black md:p-4 md:px-[30px] max-sm:p-[10px]'>
+            <div className='flex items-center max-sm:flex-col'>
+                <img src={collab} className='h-[400px] max-sm:h-[300px]'/>
                 <div className='space-y-4'>
                     <h1 className='text-2xl font-bold text-[#4D4D4D]'>About Us</h1>
                     <hr className='h-[5px] bg-[#4D4D4D]  rounded-md'/>
@@ -41,7 +42,8 @@ function MainContent() {
         </div>
 
         {/* years */}
-        <div className='yearBack pt-[50px]  pb-[50px] p-4 px-[30px] flex justify-around text-center space-x-2'>
+        <div className='yearBack py-[50px] p-4 px-[30px]
+         flex justify-around text-center max-sm:flex-col space-x-2 max-sm:p-4 max-sm:space-y-4'>
             <div className=''>
                 <p className='text-lg font-bold '>2015</p>
                 <p className='text-md font-normal'>Created to provide capital to small businesses. Evaluates business’ actual performance.</p>
@@ -60,13 +62,13 @@ function MainContent() {
             </div>
         </div>
         {/* financial problems */}
-        <div className='bg-white p-4 px-[30px] py-[50px] text-black flex justify-between '>
+        <div className='bg-white p-4 px-[30px] py-[50px] text-black flex justify-between max-sm:p-4 max-sm:flex-col'>
             <div className=''>
             <h1 className='text-3xl font-semibold'>Ready to solve your financial problem?</h1>
             <p className='text-lg font-normal'>It’s free—prequalify without affecting your credit. It’s free—prequalify 
             without affecting your credit!</p>
             </div>
-            <button className='ring-2 ring-[#11AAA2] rounded-[30px] bg-[#11AAA2] flex justify-center text-lg font-normal w-[20%] mt-[30px]'>
+            <button className='ring-2 ring-[#11AAA2] rounded-[30px] bg-[#11AAA2] flex justify-center text-lg font-normal w-[20%] mt-[30px] max-sm:w-[50%] text-white'>
                     Get Your Loan Now
                     
             </button>

@@ -1,17 +1,19 @@
 import React from 'react'
 import logo from "../../assets/logo.png";
 import "./Navbar.css"
+import { GiHamburgerMenu } from "react-icons/gi";
+
 function Navbar() {
   return (
-    <div className='navbar p-4 px-[30px] '>
+    <div className='navbar md:p-4 md:px-[30px] max-sm:p-2 '>
         <div className='flex justify-between items-center'>
             {/* logo */}
-            <div className='flex space-x-6 items-center'>
+            <div className='flex md:space-x-6 items-center'>
                 <img src={logo} />
                 <h1 className='text-lg font-bold'>My Loan Mart</h1>
             </div>
             {/* links */}
-            <ul className='flex space-x-[40px] text-lg font-semibold'>
+            <ul className='flex md:space-x-[40px] text-lg font-semibold max-sm:hidden'>
                 <li>Home</li>
                 <li>About</li>
                 <li>Contact</li>
@@ -25,6 +27,9 @@ function Navbar() {
                     </div>
                 </li>
             </ul>
+            <span className='md:hidden'>
+              <GiHamburgerMenu size="25"/>
+            </span>
       </div>
     </div>
   )
