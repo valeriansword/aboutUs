@@ -5,5 +5,9 @@
 }
 .yearBack{
     background: linear-gradient(122.74deg, #002B95 15.09%, #011547 105.43%);
+    
 
 }
+.slick-slide > div{
+    margin:0px 5px;
+  }

@@ -8,8 +8,8 @@ function App() {
 
   return (
    <div className='backColor  text-white'>
-        <ServiceNavbar />
-        <ServiceContent />
+        <Navbar />
+        <MainContent />
         
    </div>
   )

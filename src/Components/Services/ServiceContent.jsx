@@ -19,7 +19,7 @@ function ServiceContent() {
         <div className='flex mb-[30px] md:p-4 md:px-[30px] max-sm:p-2 max-sm:w-full max-sm:flex-col-reverse'>
             <div className='flex flex-col  justify-center max-sm:w-full max-sm:mt-[20px]'>
                 <h1 className='text-4xl font-bold max-sm:text-xl'>Our Services</h1>
-                <p className='text-lg font-bold max-sm:text-md max-sm:font-thin'>
+                <p className='text-lg font-thin max-sm:text-md max-sm:font-thin'>
                 We operate our banking services in many countries 
                 around the world.
                 </p>

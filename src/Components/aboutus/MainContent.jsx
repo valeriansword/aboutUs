@@ -6,7 +6,52 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import business from "../../assets/business.jpg";
+import Slider from "react-slick";
 function MainContent() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows:false,
+        responsive:[
+            
+               { breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  fade: true,
+                  autoplay: true,
+                  autoplaySpeed: 3000,
+                },
+    }]
+      };
+      const yearData=[
+        {
+            id:1,
+            year:"2015",
+            desc:"Created to provide capital to small businesses. Evaluates business’ actual performance."
+        },
+        {
+            id:2,
+            year:"2018",
+            desc:"Created to provide capital to small businesses. Evaluates business’ actual performance."
+        },
+        {
+            id:3,
+            year:"2021",
+            desc:"Created to provide capital to small businesses. Evaluates business’ actual performance."
+        },
+        {
+            id:4,
+            year:"2023",
+            desc:"Created to provide capital to small businesses. Evaluates business’ actual performance."
+        }
+      ]
   return (
     <div className=' text-white  '>
         {/* top-Content */}
@@ -23,7 +68,7 @@ function MainContent() {
                 </button>
             </div>
             <div>
-                <img src={aboutUs} className='max-sm:h-[200px] max-sm:w-full'/>
+                <img src={business} className=' h-[300px] rounded-md  max-sm:h-[250px] max-sm:w-full'/>
             </div>
         </div>
         {/* aboutus image and content */}
@@ -31,7 +76,7 @@ function MainContent() {
             <div className='flex items-center max-sm:flex-col'>
                 <img src={collab} className='h-[400px] max-sm:h-[300px]'/>
                 <div className='space-y-4'>
-                    <h1 className='text-2xl font-bold text-[#4D4D4D]'>About Us</h1>
+                    <h1 className='text-2xl font-bold text-[#4D4D4D]'>Know About Us</h1>
                     <hr className='h-[5px] bg-[#4D4D4D]  rounded-md'/>
                     <p className='text-justify'>Headquartered in Mumbai, L&T Finance Limited (formerly known as L&T Finance Holdings Limited) is one of the leading Non-Banking Financial Companies in India, with a strong presence across the lending business catering to the diverse financing needs of served and underserved customers.
                         L&T Finance offers Personal loans, Two-Wheeler loans, Home loans, Rural Business loans, Farm loans, and SME loans. At L&T Finance, we are committed to providing customised financial solutions that meet the unique needs of our customers. With a focus on innovation and customer-centricity, we aim to be a trusted partner in our customers' financial journey.
@@ -40,33 +85,30 @@ function MainContent() {
             </div>
             
         </div>
+       
+        
+        <div className='bg-white text-center py-[20px]'>
+            <div className='w-[95%] mx-auto space-x-2  '>       
+           <Slider {...settings} >
+            { yearData.map((data)=>(
+                <div key={data.id} className='yearBack rounded-md p-2 w-[100px] '>
+                <p className='text-lg font-bold '>{data.year}</p>
+                <p className='text-md font-normal'>{data.desc}</p>
+            </div>
+            ))}
+            
+            
+            </Slider>
+            </div></div>
 
-        {/* years */}
-        <div className='yearBack py-[50px] p-4 px-[30px]
-         flex justify-around text-center max-sm:flex-col space-x-2 max-sm:p-4 max-sm:space-y-4'>
-            <div className=''>
-                <p className='text-lg font-bold '>2015</p>
-                <p className='text-md font-normal'>Created to provide capital to small businesses. Evaluates business’ actual performance.</p>
-            </div>
-            <div>
-                <p className='text-lg font-bold'>2018</p>
-                <p className='text-md font-normal'>Created to provide capital to small businesses. Evaluates business’ actual performance.</p>
-            </div>
-            <div>
-                <p className='text-lg font-bold'>2021</p>
-                <p className='text-md font-normal'>Created to provide capital to small businesses. Evaluates business’ actual performance.</p>
-            </div>
-            <div>
-                <p className='text-lg font-bold'>2023</p>
-                <p className='text-md font-normal'>Created to provide capital to small businesses. Evaluates business’ actual performance.</p>
-            </div>
-        </div>
+            
+       
         {/* financial problems */}
         <div className='bg-white p-4 px-[30px] py-[50px] text-black flex justify-between max-sm:p-4 max-sm:flex-col'>
             <div className=''>
             <h1 className='text-3xl font-semibold'>Ready to solve your financial problem?</h1>
             <p className='text-lg font-normal'>It’s free—prequalify without affecting your credit. It’s free—prequalify 
-            without affecting your credit!</p>
+            without affecting your cibil score!</p>
             </div>
             <button className='ring-2 ring-[#11AAA2] rounded-[30px] bg-[#11AAA2] flex justify-center text-lg font-normal w-[20%] mt-[30px] max-sm:w-[50%] text-white'>
                     Get Your Loan Now

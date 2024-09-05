@@ -10,7 +10,7 @@ function Navbar() {
     <div className='navbar md:p-4 md:px-[30px] max-sm:p-2 '>
         <div className='flex justify-between items-center'>
             {/* logo */}
-            <div className='flex md:space-x-6 items-center'>
+            <div className='flex md:space-x-4 items-center'>
                 <img src={logo} />
                 <h1 className='text-lg font-bold'>My Loan Mart</h1>
             </div>
